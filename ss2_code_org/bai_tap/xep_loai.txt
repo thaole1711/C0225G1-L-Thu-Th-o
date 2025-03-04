@@ -1,0 +1,14 @@
+Begin 
+  Input(S)
+   If S>=75 
+    Display(Loai A)
+   Else 
+      If S>=60 
+       Display(Loai B)
+      If S>=45 
+       Display(Loai c)
+      If S>=35
+       Display(Loai D)
+      Else 
+       Display(Loai E)
+End

@@ -1,0 +1,10 @@
+  Tính điểm trung bình 3 môn
+
+   Begin 
+     Input(m)
+     Input(P)
+     Input(c)
+      Tb=(M+P+C)/3
+      Display (Tb)
+   End
+     
