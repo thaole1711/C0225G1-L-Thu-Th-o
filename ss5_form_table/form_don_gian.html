@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>form đơn giản</title>
 </head>
 <body>
-$END$
+<form action="simpleform.html" methol="get">
+    <h3 style="background-color:orange; color:white;justify-content:center;width:300px">SỞ THÍCH CỦA BẠN</h3>
+    <div style="margin-bottom: 5px"><label for="name" name="name"> Họ và tên </label>
+        <input type="text" name="yourname" id="name"><br></div>
+    <div style="display: flex;justify-content: space-between;width:200px">
+        <label for="email" name="email">Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+
+    <lable for=" hobby" name="hobby">Sở thích</lable>
+    <input type="checkbox" name="hobby">Thể thao
+    <input type="checkbox" name="hobby">Âm nhạc
+    <input type="checkbox" name="hobby">Đọc sách<br>
+    <input type="checkbox" name="hobby"> Lướt web
+    <input type="checkbox" name="hobby">Chơi game
+    <input type="checkbox" name="hobby"> Điện ảnh<br>
+    <input type="checkbox" name="hobby"> Du lịch<br>
+    <input type="submit" value="Gửi thông tin">
+    <input type="reset" value="Nhập lại">
+
+    <div style="margin-bottom:50px"></div>
+
+    <H2> ĐĂNG KÍ HỌC VIÊN</H2>
+    <div style="margin-bottom: 5px"><Span> Họ và tên</Span>
+        <input type="text" name="name"> <br></div>
+    <span> Ngày sinh </span>
+    <input type="number" name="name"><br>
+    <span> Giới tính</span>
+    <input type="radio" name="gender">Nam
+    <input type="radio" name="gender">Nữ <br>
+    <span style="vertical-align:top;"> Địa chỉ</span>
+    <textarea rows="3" cols="30" name="message"> </textarea><br>
+    <label for="class" name="class"> Lớp </label>
+    <select name="class" id="class">
+        <option value="a">-Chọn lớp-</option>
+        <option value="a1">A1</option>
+        <option value="a2">A2</option>
+        <option value="a3">A3</option>
+        <option value="a4">A4</option>
+    </select> <br>
+    <div style="margin-bottom: 5px"><span> Email</span>
+        <input type="email" name="email"><br></div>
+    <span> Điện thoại</span>
+    <input type="number" name="number"><br>
+    <input type="submit" value="Đăng kí">
+    <input type="reset" value="Nhập lại">
+
+
+</form>
+
 </body>
 </html>

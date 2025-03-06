@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Form đăng kí</title>
 </head>
 <body>
-$END$
+<h3>Mô tả</h3>
+<form action="http://demo.codegym.vn/6/registration_form/register.php" method="post">
+    <label for="name"> Họ và tên: </label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="name"><br>
+    <label for="sdt"> Số điện thoại:</label><br>
+    <input type="number" name="number" id="sdt"><br>
+    <p> Giới tính</p>
+    <input type="radio" name="gender" checked>Nam
+    <input type="radio" name="gender"> Nữ<br>
+    <input type="submit" name="submit" value="Đăng kí">
+
+
+</form>
+
 </body>
 </html>
