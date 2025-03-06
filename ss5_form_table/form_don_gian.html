@@ -5,39 +5,51 @@
     <title>form đơn giản</title>
 </head>
 <body>
-<form action="simpleform.html" methol="get">
+<form style="background-color: beige; padding: 10px" action="simpleform.html" method="get">
     <h3 style="background-color:orange; color:white;justify-content:center;width:300px">SỞ THÍCH CỦA BẠN</h3>
-    <div style="margin-bottom: 5px"><label for="name" name="name"> Họ và tên </label>
+    <div style="margin-bottom: 5px"><label for="name" style="color: aqua"> Họ và tên </label>
         <input type="text" name="yourname" id="name"><br></div>
     <div style="display: flex;justify-content: space-between;width:200px">
-        <label for="email" name="email">Email</label>
+        <label style="margin-right: 25px" for="email">Email</label>
         <input type="email" name="email" id="email">
     </div>
 
-    <lable for=" hobby" name="hobby">Sở thích</lable>
-    <input type="checkbox" name="hobby">Thể thao
+    <label>Sở thích</label>
+    <input type="checkbox" name="hobby" value="sport">Thể thao
     <input type="checkbox" name="hobby">Âm nhạc
     <input type="checkbox" name="hobby">Đọc sách<br>
-    <input type="checkbox" name="hobby"> Lướt web
+    <input style="margin-left: 61px" type="checkbox" name="hobby"> Lướt web
     <input type="checkbox" name="hobby">Chơi game
     <input type="checkbox" name="hobby"> Điện ảnh<br>
-    <input type="checkbox" name="hobby"> Du lịch<br>
-    <input type="submit" value="Gửi thông tin">
-    <input type="reset" value="Nhập lại">
+    <input style="margin-left: 61px" type="checkbox" name="hobby"> Du lịch<br>
 
-    <div style="margin-bottom:50px"></div>
 
-    <H2> ĐĂNG KÍ HỌC VIÊN</H2>
-    <div style="margin-bottom: 5px"><Span> Họ và tên</Span>
-        <input type="text" name="name"> <br></div>
+    <div style="margin-top: 10px;">
+        <input type="submit" value="Gửi thông tin">
+        <!-- button ma khi user bam nut thi se gui len sever -->
+        <input type="reset" value="Nhập lại">
+   </div>
+
+
+
+</form>
+
+
+
+<form>
+    <h2>ĐĂNG KÍ HỌC VIÊN</h2>
+    <div style="margin-bottom: 5px">
+        <label for="username">Ho va ten</label>
+        <input type="text" name="name" id="username"> <br>
+    </div>
     <span> Ngày sinh </span>
     <input type="number" name="name"><br>
     <span> Giới tính</span>
     <input type="radio" name="gender">Nam
-    <input type="radio" name="gender">Nữ <br>
-    <span style="vertical-align:top;"> Địa chỉ</span>
+    <input type="radio" name="gender">Nữ<br>
+    <span style="vertical-align:top;">Địa chỉ</span>
     <textarea rows="3" cols="30" name="message"> </textarea><br>
-    <label for="class" name="class"> Lớp </label>
+    <label for="class">Lớp</label>
     <select name="class" id="class">
         <option value="a">-Chọn lớp-</option>
         <option value="a1">A1</option>
@@ -45,14 +57,13 @@
         <option value="a3">A3</option>
         <option value="a4">A4</option>
     </select> <br>
-    <div style="margin-bottom: 5px"><span> Email</span>
-        <input type="email" name="email"><br></div>
-    <span> Điện thoại</span>
-    <input type="number" name="number"><br>
+    <div style="margin-bottom: 5px">
+        <label for="user_email">Email</label>
+        <input type="email" name="email" id="user_email"><br></div>
+    <label for="number">Phone number</label>
+    <input type="number" name="number" id="number"><br>
     <input type="submit" value="Đăng kí">
     <input type="reset" value="Nhập lại">
-
-
 </form>
 
 </body>
