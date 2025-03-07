@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chu vi</title>
+</head>
+<body>
+<input id="length"> chiều dài
+<input id="width"> chiều rộng
+<button type="button" onclick="ketqua()">Kết Quả</button>
+<script>
+    function ketqua() {
+        let dai = +document.getElementById("length").value;
+        let rong = +document.getElementById("width").value;
+        let cv = (dai + rong) * 2;
+        alert("kết quả là:" + cv);
+
+
+    }
+</script>
+</body>
+</html>

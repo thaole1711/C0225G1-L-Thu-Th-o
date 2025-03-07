@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hình chữ nhật</title>
+</head>
+<body>
+<form>
+    <h3>tính hình chữ nhật</h3>
+    <label for="dai" > chiều dài</label>
+    <input id="dai">
+    <label for="rong"> chiều rộng</label>
+    <input  id="rong">
+    <p id="dapan">kết quả tổng</p>
+    <p id="dapantich">kết quả tích</p>
+    <button type="button" onclick="ketQua()">kết quả</button>
+    <
+</form>
+
+
+<script>
+    function ketQua() {
+        let dai = +document.getElementById("dai").value;
+        let rong = +document.getElementById("rong").value;
+        let tich = dai * rong;
+        let chuVi =(dai + rong)*2;
+
+        document.getElementById("dapan").innerHTML = ('kết quả tích là' + tich);
+
+        document.getElementById("dapantich").innerHTML = (" kêt quả tổng là" + chuVi);
+        alert('ket qua dien tich là' + tich);
+        alert("ket qua tong la" + chuVi);
+    }
+</script>
+
+</body>
+</html>
