@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>nhập điểm của một sinh viên</h3>
+<div>
+    <label for="physicScore">Nhap diem ly</label>
+    <input type="text" id="physicScore" name="physicScore"><br>
+    <label for="physicScore">Nhap diem hoa</label>
+    <input type="text" id="chemistryScore" name="physicScore"><br>
+    <label for="physicScore">Nhap diem sinh</label>
+    <input type="text" id="biologyScore" name="physicScore"><br>
+    <p id="result"></p>
+    <button type="button" onclick="tinhTB()">Click</button>
+</div>
+
+<h3>tinh do F</h3>
+<input type="number" id="doC"> Độ C(celsius)
+<p id="resultF"></p>
+<button type="button" onclick="chuyenDoi()">Nhập</button>
+<br>
+
+<h3> Dien tich va chu vi hinh tron</h3>
+<label for="r">Nhap ban phim</label>
+<input type="text" id="r">
+<p id="resultCircle"></p>
+<button type="button" onclick="tron()">kết quả</button>
+<script>
+    function tinhTB() {
+        let physicScore = parseFloat(document.getElementById("physicScore").value);
+        let chemistryScore = parseFloat(document.getElementById("chemistryScore").value);
+        let biologyScore = parseFloat(document.getElementById("biologyScore").value);
+
+        let sum = physicScore + chemistryScore + biologyScore;
+        let average = sum / 3;
+        document.getElementById("result").innerText = `Diem tong la ${sum} va diem trung binh la ${average}`
+    }
+
+
+    function chuyenDoi() {
+        let celsius = +document.getElementById("doC").value;
+        let fahrenheit = ((celsius / 5) * 9) + 32;
+        document.getElementById("resultF").innerText = `do F la: ${fahrenheit}`;
+    }
+
+    function tron() {
+        let banKinh = +document.getElementById("r").value;
+        const PI = 3.14;
+        let chuVi = 2 * PI * banKinh;
+        let dienTich = PI * banKinh ** 2;
+        document.getElementById("resultCircle").innerText = `Chu vi la ${chuVi} va dien tich la ${dienTich}`;
+    }
+</script>
+
+</body>
+</html>
