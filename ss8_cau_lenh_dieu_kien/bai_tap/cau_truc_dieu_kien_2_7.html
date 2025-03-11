@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhap a"));
+    let b = parseInt(prompt("nhap b"));
+    let c = parseInt(prompt("nhap c"));
+    let delta = b * b - 4 * a * c;
+    if (delta === 0) {
+        alert("phuong trinh co nghiep kep:" + (-b / 2 * a));
+    } else if (delta > 0) {
+        alert("phuong trinh co nghiem 1 la:" + (-b +Math.sqrt(delta) ) / 2 * a);
+        alert("phuong trinh co nghiem 2 la:" + (-b -Math.sqrt(delta) ) / 2 * a);
+    } else {
+        alert("phuong trinh vo nghiem");
+
+    }
+
+
+</script>
+
+</body>
+</html>

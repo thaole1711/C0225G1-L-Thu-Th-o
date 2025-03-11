@@ -5,6 +5,22 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let soTranThang = +prompt("nhap so tran thang");
+    let soTranDaChoi = +prompt("nhap so tran đã chơi");
+    let mainScore = soTranThang * 20;
+    let winRate = soTranThang / soTranDaChoi * 100;
+    if (mainScore >= 10000 && winRate >= 0.7){
+        alert("kim Cuong");
+    } else if (10000 > mainScore >= 5000 && winRate >= 0.6) {
+        alert("vang");
+    } else if (5000 > mainScore >= 1000 && winRate >= 0.5) {
+        alert("bac");
+    } else if(mainScore<1000||winRate<0.5){
+        alert("dong");
+    } else alert("tan binh")
+
+</script>
 
 </body>
 </html>
