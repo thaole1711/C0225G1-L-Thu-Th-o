@@ -8,17 +8,27 @@
 <script>
     let soTranThang = +prompt("nhap so tran thang");
     let soTranDaChoi = +prompt("nhap so tran đã chơi");
-    let mainScore = soTranThang * 20;
+    while (soTranThang> soTranDaChoi){
+        alert("Vui long nhan lai");
+         soTranThang = +prompt("nhap so tran thang");
+         soTranDaChoi = +prompt("nhap so tran đã chơi");
+    }
+    let mainScore =+prompt(("nhap so diem thang"))
     let winRate = soTranThang / soTranDaChoi * 100;
-    if (mainScore >= 10000 && winRate >= 0.7){
-        alert("kim Cuong");
-    } else if (10000 > mainScore >= 5000 && winRate >= 0.6) {
-        alert("vang");
-    } else if (5000 > mainScore >= 1000 && winRate >= 0.5) {
-        alert("bac");
-    } else if(mainScore<1000||winRate<0.5){
-        alert("dong");
-    } else alert("tan binh")
+    if(soTranDaChoi<5){
+        alert("tan binh");
+    }else {
+        if (mainScore >= 10000 && winRate >= 0.7){
+            alert("kim Cuong");
+        } else if (10000 > mainScore >= 5000 && winRate >= 0.6) {
+            alert("vang");
+        } else if (5000 > mainScore >= 1000 && winRate >= 0.5) {
+            alert("bac");
+        } else{
+            alert("dong");
+        }
+        }
+
 
 </script>
 

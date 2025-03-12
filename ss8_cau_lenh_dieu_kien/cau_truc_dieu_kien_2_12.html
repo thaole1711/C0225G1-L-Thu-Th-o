@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let tienGoc=parseInt(prompt("nhap so tien goc"));
+  let thang=parseInt(prompt("nhap so thang cho vay"));
+  if(6>=thang&&thang>1){
+    alert("lai ngan hang la :"+(tienGoc*(1+0.01)**thang)-tienGoc);
+  }else if(12>=thang&&thang>6){
+    alert("lai ngan hang la :"+(tienGoc*(1+0.02)**thang)-tienGoc);
+  }else if(18>=thang&&thang>12){
+    alert("lai ngan hang la :"+(tienGoc*(1+0.03)**thang)-tienGoc);
+  }else{
+    alert("lai ngan hang la :"+(tienGoc*(1+0.04)**thang)-tienGoc);
+  }
+</script>
+</body>
+</html>

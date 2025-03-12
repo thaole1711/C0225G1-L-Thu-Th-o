@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhap = parseInt(prompt("nhap thu nhap thang"));
+    if (5000000 > thuNhap > 0) {
+        alert("thue thu nhap ca nhan la:" + thuNhap * 0.05);
+    } else if (10000000 > thuNhap > 5000001) {
+        alert("thue thu nhap ca nhan la:" + thuNhap * 0.1);
+    } else if (18000000 > thuNhap > 10000001) {
+        alert(`thu nhap ca nhan la:${thuNhap * 0.2}`);
+    } else {
+        alert(`thu nhap ca nhan la:${thuNhap * 0.3}`)
+    }
+</script>
+</body>
+</html>

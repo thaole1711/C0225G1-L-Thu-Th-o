@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tieuThu = parseInt(prompt("nhap so kwh tieu thu"));
+    if (50 > tieuThu > 0) {
+        alert("tien dien la:" + tieuThu * 1600);
+    } else if (100 > tieuThu > 51) {
+        alert("tien dien la:" + tieuThu * 2000);
+    } else if (200 > tieuThu > 101) {
+        alert("tien dien la:" + tieuThu * 2500);
+    } else {
+        alert("tien dien la:" + tieuThu * 3000);
+    }
+</script>
+
+</body>
+</html>
