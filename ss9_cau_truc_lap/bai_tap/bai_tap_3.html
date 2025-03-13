@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let soTiep=1;
+  let soDau=0;
+  let swap=0;
+  let result = soDau+ ","+soTiep;
+  for (let i = 0; i <18;i++) {
+      swap=soDau+soTiep;
+      result += ','+swap;
+      soDau=soTiep;
+      soTiep=swap;
+  }
+document.write(result);
+
+
+</script>
+
+</body>
+</html>

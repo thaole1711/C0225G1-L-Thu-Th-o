@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let soDau=0;
+  let soTiep=1;
+  let hienTai=0;
+  let sum=soDau+soTiep;
+  for (i=1;i<3;i++){
+    hienTai=soDau+soTiep;
+    sum+=hienTai;
+    soDau=soTiep;
+    soTiep=hienTai;
+  }
+  alert(sum);
+</script>
+</body>
+</html>

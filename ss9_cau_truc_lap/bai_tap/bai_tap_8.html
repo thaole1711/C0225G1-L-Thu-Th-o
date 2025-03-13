@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="choi()">bắt đầu</button>
+<script>
+    function choi() {
+        let max = parseInt(prompt("nhap gia tri du doan lon nhat"));
+        let so = parseInt(prompt("nhap so ban chon"));
+        let soNgauNhien = Math.floor(Math.random() * max);
+        alert(soNgauNhien);
+        for (let i = 0; i <= 4; i++) {
+            if (i === 3) {
+                alert("ban het luot");
+                break;
+            }
+            if (soNgauNhien === so) {
+                alert("ban chon dung");
+                break;
+            } else if (soNgauNhien > so) {
+                alert("nhap lon hon");
+                so = +prompt("nhap lai");
+            } else {
+                alert("nhap nho hon");
+                so = +prompt("nhap lai");
+            }
+
+        }
+    }
+</script>
+</body>
+</html>

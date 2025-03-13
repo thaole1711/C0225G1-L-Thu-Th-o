@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap=parseInt(prompt("nhap fibonaci"));
+    let soDau=0;
+    let soTiep=1;
+    let hienTai=0;
+    document.write(soDau+"<br>"+soTiep+"<br>");
+    for(let i=0;i<=(nhap-2);i++){
+        hienTai=soDau+soTiep;
+        soDau=soTiep;
+        soTiep=hienTai;
+        document.write( hienTai+"<br>");
+    }
+
+</script>
+</body>
+</html>

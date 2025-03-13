@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = 2;
+    let nguyenTo = 0;
+    while (nguyenTo < 20) {
+        let count = 0;
+        for (let i = 1; i <= n; i++) {
+            if (n % i === 0) {
+                count++;
+            }
+            if (count === 2) {
+                nguyenTo++;
+            }
+
+        }
+        n++;
+        document.write(nguyenTo + "<br>");
+    }
+
+</script>
+</body>
+</html>
