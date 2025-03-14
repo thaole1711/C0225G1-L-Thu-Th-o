@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let tiepTucLap=true;
+    while (tiepTucLap) {
+        let bang = +prompt("quan li sinh vien\n" +
+            "hay nhap so de chon do uong\n" +
+            "1.hien thi danh sach sv\n" +
+            "2.them sinh vien\n" +
+            "3.xoa sinn vien\n" +
+            "4.ket thuc chung trinh\n");
+       /*if (bang == 4) {
+            alert("ket thuc");
+            break;
+        }*/
+        switch (bang) {
+            case 1:
+                alert("hien thi danh sach");
+                break;
+            case 2:
+                alert("them sinh vien");
+                break;
+            case 3:
+                alert("xoa sinh vien");
+                break;
+            case 4:
+              let conf=  confirm("ket thuc");
+              if (conf){
+                  tiepTucLap =false;
+              }
+                break;
+
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
