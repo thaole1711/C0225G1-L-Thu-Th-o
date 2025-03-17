@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* let chuoi = prompt("nhap chuoi vao");
+     let arr=["u","e","o","a","i"];
+     let count=0;
+     for( let i=0; i<chuoi.length;i++){
+         if(arr.includes(chuoi[i])){
+             count++;
+         }
+     }
+     alert(count);*/
+
+    /*  let chuoi = prompt("nhap chuoi vao");
+      let arr = chuoi.split("");
+      let nguyenAm=["u","e","o","a","i"];
+      let count=0;
+      for(let i=0;i<arr.length;i++){
+             if(nguyenAm.includes(arr[i])) {
+                 count++;
+          }
+      }
+      alert(count);*/
+
+    let chuoi = prompt("nhap chuoi");
+    let arr = chuoi.split("");
+    let nguyenAm = ["u", "e", "i", "o", "a", "i"];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let lap = false;
+        for (let j = 0; j < nguyenAm.length; j++) {
+            if (nguyenAm[j] === arr[i]) {
+                lap = true;
+                break;
+            }
+        }
+        if (lap) {
+            count++;
+        }
+    }
+    alert(count);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let tam;
+    let doDai = +prompt("nhap do dai vao");
+    while (doDai <= 0) {
+        doDai = +prompt("nhap do dai vao");
+    }
+    for (let i = 0; i < doDai; i++) {
+        arr[i] = +(prompt("nhap phan tu vao" + i));
+    }
+    for (let i = 0; i < arr.length / 2; i++) {
+        tam = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = tam;
+    }
+    alert(arr);
+</script>
+</body>
+</html>

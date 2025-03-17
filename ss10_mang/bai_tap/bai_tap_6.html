@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 4; i++) {
+        arr[i] = +prompt("nhap so nguyen vao" + i);
+    }
+    alert(arr);
+    let soNguyenV = +prompt("nhap so nguyen ");
+    /*  if (arr.includes(soNguyenV)) {
+          alert(" v is in the array");
+      } else {
+          alert("V is not in the array");
+      }*/
+    let tam = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === soNguyenV) {
+            alert("ok");
+            tam = true;
+        }
+    }
+    if (tam) {
+        alert("vis in the array");
+    } else {
+        alert(" a is not in the array");
+    }
+
+</script>
+</body>
+</html>

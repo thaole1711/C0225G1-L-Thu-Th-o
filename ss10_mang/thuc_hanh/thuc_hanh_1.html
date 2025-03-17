@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  let arr= [10,20,30,40,50];
+   /* let dau=0;
+    let cuoi= arr.length-1;
+    while( dau<cuoi){
+        let rong=arr[dau];
+        arr[cuoi]=arr[dau];
+        arr[dau]=rong;
+        dau++;
+        cuoi--;
+    }
+    console.log(arr);
+    document.write(arr);*/
+     for(let i=0; i<arr.length/2;i++){
+         let tam =arr[i];
+         arr[i] =arr[arr.length-1-i];
+       arr[arr.length-1-i]= tam;
+     }
+     document.write(arr);
+</script>
+
+</body>
+</html>
