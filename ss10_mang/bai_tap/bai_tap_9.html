@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = [];
+    let arrB = [];
+    let a = +prompt("nhap do dai a");
+    for (let i = 0; i < a; i++) {
+        arrA[i] = +prompt("phan tu a la" + i);
+    }
+    let b = +prompt("nhap do dai b");
+    for (let j = 0; j < b; j++) {
+        arrB[j] = +prompt(("phan tu a la:" + j));
+    }
+    let arrC = arrA.concat(arrB);
+    alert(arrC);
+</script>
+</body>
+</html>

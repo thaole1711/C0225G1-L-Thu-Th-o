@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let doDai = +prompt("nhap do dai:");
+    for (let i = 0; i < doDai; i++) {
+        arr[i] = prompt("nhap gia tri cua mang:" + i);
+    }
+    alert(arr);
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === "-") {
+            arr[i] = "_";
+        }
+    }
+    alert("sau khi thay the la:" + arr);
+</script>
+</body>
+</html>

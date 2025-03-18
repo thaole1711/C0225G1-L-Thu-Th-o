@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let doDai = +(prompt("nhap n phan tu:"));
+    for (let i = 0; i < doDai; i++) {
+        arr[i] = +(prompt("nhap phan tu o vi tri: " + i));
+    }
+    let phanTu = +prompt("nhap so nguyen v: ");
+    let gan = false;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === phanTu) {
+            gan = true;
+        }
+        if (gan && i < arr.length-1){
+            arr[i] = arr[i] + 1;
+        }
+    }
+    if (gan) {
+        arr[arr.length-1]=0;
+    }
+    alert(arr);
+</script>
+</body>
+</html>

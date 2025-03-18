@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrAnh = ["hello", "do", "translate"];
+    let arrViet = ["xinchao", "lam", "dich"];
+    let flag = false;
+ /*   for (let i = 0; i < arrAnh.length; i++) {
+        if (tim === arrAnh[i]) {
+            flag = true;
+            alert(arrViet[i]);
+        } else if (tim === arrViet[i]) {
+            flag = true;
+            alert(arrAnh[i]);
+        }
+    }
+    if (!flag) {
+        alert("khong tim thay");
+    }*/
+    do{
+       let tim = prompt("nhap tu can tim");
+        for( let i=0; i<arrAnh.length;i++){
+            if (tim===arrAnh[i]){
+                alert(arrViet[i]);
+                flag=true;
+            }else if(tim===arrViet[i]){
+                alert(arrAnh[i]);
+                flag=true;
+            }
+        }
+        if(!flag){
+            alert("khong tim thay");
+        }
+    }while (!flag)
+</script>
+</body>
+</html>

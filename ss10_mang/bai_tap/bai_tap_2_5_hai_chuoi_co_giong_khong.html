@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt("nhap chuoi vao:");
+    let str1 = prompt("nhap chuoi 2 vao:");
+    let arr = str.split();
+    let arr1 = str1.split();
+    alert(arr);
+    alert(arr1);
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr1.length; j++) {
+            if (arr[i] === arr1[j]) {
+                alert("hai chuoi co giong nhau");
+            } else {
+                alert("hai chuoi khong giong nhau")
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let arr = [];
+    let doDai = +prompt("do dai la:");
+    for (let i = 0; i < doDai; i++) {
+        arr[i] = prompt("nhap gia tri vao mang" + i);
+    }
+    alert(arr);
+    let arrA = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arrA.length; j++) {
+            if (arrA[j] == arr[i]) {
+                count++;
+            }
+        }
+    }
+    alert("tong so ki tu la:" + count);
+  /* let n = +prompt('Nhập số kí tự');
+   let mang = new Array(n);
+   for (let i = 0; i < mang.length; i++) {
+       mang[i] = prompt(`Nhập giá trị ${i}`);
+   }
+   let demSo = 0;
+   for (let i = 0; i < mang.length; i++) {
+       if (mang[i] >= 0 && mang[i] <= 9) {
+           demSo++;
+       }
+   }
+   alert(`có ${demSo} số từ 0-9`);*/
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = "The Quick Brown Fox";
+    let ketQua="";
+    for (let i = 0; i < string.length; i++) {
+        if (string[i] === string[i].toLowerCase()) {
+            ketQua += string[i].toUpperCase();
+        }else {
+            ketQua +=string[i].toLowerCase();
+        }
+    }
+    alert("hien thi la :"+ketQua);
+</script>
+</body>
+</html>

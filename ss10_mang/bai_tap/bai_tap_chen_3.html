@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = "01284322"
+    let ketQua = "";
+    for (let i = 0; i < string.length; i++) {
+        ketQua += string[i];
+        if (parseInt(string[i]) % 2 === 0 && parseInt(string[i + 1]) % 2 === 0) {
+            ketQua += "-";
+        }
+    }
+    alert(ketQua);
+</script>
+</body>
+</html>
