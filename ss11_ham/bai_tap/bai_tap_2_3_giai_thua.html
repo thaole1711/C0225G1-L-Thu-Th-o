@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function giaiThua(a) {
+        let result = 1;
+        if (a < 0) {
+            return "khong co giai thua cho so am";
+        }
+        for (let i = 2; i <= a; i++) {
+            result *= i;
+        }
+        return result;
+
+    }
+
+    let number = +prompt("nhap so vao");
+    alert(giaiThua(number));
+
+</script>
+</body>
+</html>

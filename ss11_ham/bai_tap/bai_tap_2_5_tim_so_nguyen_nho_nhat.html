@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function timSo(a,b,c){
+    let min=0;
+      if(a<b && a<c){
+        min=a;
+      }else {
+      } if( b<c){
+        min =b;
+        }else {
+        min=c;
+      }
+    return min;
+  }
+
+  let so1=+prompt("nhap  so thu nhat vao");
+  let so2=+prompt("nhap so thu hai vao");
+  let so3=+prompt("nhap so thu ba vao");
+  alert(timSo(so1,so2,so3));
+</script>
+</body>
+</html>
