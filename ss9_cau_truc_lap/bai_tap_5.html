@@ -5,6 +5,63 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let tiepTucLap = true;
+    let danhSachSinhVien = ["Le Văn A", "Nguyen VănB", "Nguyen Thi C"];
 
+    function danhSach() {
+        let sinhVien="";
+        for (let i = 0; i < danhSachSinhVien.length; i++) {
+            sinhVien += `${i}.${danhSachSinhVien[i]}\n`;
+        }
+        return sinhVien;
+    }
+    function hienThiDanhSach(){
+        let hienThi=danhSach();
+        alert("--------danh sách sinh viên ------\n"+`${hienThi}`);
+    }
+    function themSinhVien(){
+        let them=prompt(`Nhap tên sinh viên bạn thêm vao đây`);
+        danhSachSinhVien.push(them);
+        hienThiDanhSach();
+    }
+    function xoaSinhVien(){
+        let  danhSach1=danhSach();
+        let viTri=+prompt(`${danhSach1}\nnhap  vị trị bạn muốn xóa `);
+        danhSachSinhVien.splice(viTri,1);
+        hienThiDanhSach();
+    }
+
+    while (tiepTucLap) {
+        let bang = +prompt("quan li sinh vien\n" +
+            "1.hien thi danh sach sv\n" +
+            "2.them sinh vien\n" +
+            "3.xoa sinn vien\n" +
+            "4.ket thuc chung trinh\n");
+        /*if (bang == 4) {
+             alert("ket thuc");
+             break;
+         }*/
+
+        switch (bang) {
+            case 1:
+                hienThiDanhSach();
+                break;
+            case 2:
+                themSinhVien();
+                break;
+            case 3:
+                xoaSinhVien();
+                break;
+            case 4:
+                let conf = confirm("bạn có muốn  kết thúc không");
+                if (conf) {
+                    tiepTucLap = false;
+                }
+                break;
+        }
+    }
+
+</script>
 </body>
 </html>

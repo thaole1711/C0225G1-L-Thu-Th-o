@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let array=[3,5,7,11];
+  let array1=[2,3,4,5,6];
+  function kiemTra(arr){
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 2; j <arr[i] ; j++) {
+        if(arr[i]%j===0){
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+  alert(kiemTra(array));
+</script>
+</body>
+</html>

@@ -6,41 +6,66 @@
 </head>
 <body>
 <script>
-let tiepTucLap=true;
+    let tiepTucLap = true;
+    let danhSachSinhVien = [" Tran Van A", "Nguyen", "Thi C"];
+    function danhSach() {
+        let list=" " ;
+        for (let i = 0; i < danhSachSinhVien.length; i++) {
+            list+=`${i}.${danhSachSinhVien[i]}\n`;
+        }
+        return list;
+    }
+    function hienThiSinhVien(){
+        let hienThi= danhSach();
+        alert("-------danh sách sinh viên-------\n"+`${hienThi}`);
+
+    }
+    function themSinhVien(){
+        let themSinhVien= prompt("nhập tên của sinh viên muốn thêm vào");
+        danhSachSinhVien.push(themSinhVien);
+        hienThiSinhVien();
+    }
+    function xoaSinhVien(){
+        let  danhSach1= danhSach();
+        let viTri= +prompt(`${danhSach1} nhập vi trí sinh viên muốn xoá  `);
+
+        danhSachSinhVien.splice(viTri,1);
+        hienThiSinhVien();
+    }
+
     while (tiepTucLap) {
         let bang = +prompt("quan li sinh vien\n" +
-            "hay nhap so de chon do uong\n" +
             "1.hien thi danh sach sv\n" +
             "2.them sinh vien\n" +
             "3.xoa sinn vien\n" +
             "4.ket thuc chung trinh\n");
-       /*if (bang == 4) {
-            alert("ket thuc");
-            break;
-        }*/
-        
+        /*if (bang == 4) {
+             alert("ket thuc");
+             break;
+         }*/
+
         switch (bang) {
             case 1:
-
-                alert("hien thi danh sach"+danhSach());
+                hienThiSinhVien();
                 break;
             case 2:
-                alert("them sinh vien"+them());
+                themSinhVien();
                 break;
             case 3:
-                alert("xoa sinh vien");
+                xoaSinhVien();
                 break;
             case 4:
-              let conf=  confirm("ket thuc");
-              if (conf){
-                  tiepTucLap =false;
-              }
+                let conf = confirm("bạn có muốn  kết thúc không");
+                if (conf) {
+                    tiepTucLap = false;
+                }
                 break;
 
 
         }
 
     }
+
 
 </script>
 
