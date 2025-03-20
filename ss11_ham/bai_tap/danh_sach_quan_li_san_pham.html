@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<div id="ketQua"></div>
+<script>
+    let tenSanPham=["Sony Xperia","Samsung","Nokia 6"];
+    function quanLi(){
+        let stringTable =`<table border="1" style="boreder-collapse" >;
+            <tr>
+                <th> poduct name</th>
+                <th> edit</th>
+                <th> Delete</th>
+            </tr>`;
+        for (let i = 0; i < tenSanPham.length; i++) {
+           stringTable+=`
+            <tr>
+                           <td> ${tenSanPham[i]}</td>
+                           <td> <button>Edit</button></td>
+                           <td> <button>Delete</button></td>
+            </tr>
+           `
+        }
+        document.getElementById("ketQua").innerHTML= stringTable;
+    }
+
+    quanLi()
+
+</script>
+</body>
+</html>

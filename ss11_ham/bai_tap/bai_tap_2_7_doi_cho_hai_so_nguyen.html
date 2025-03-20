@@ -6,9 +6,15 @@
 </head>
 <body>
 <script>
-function doiCho(a,b) {
-
-}
+    function doiCho(a, b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        return [a, b] ;
+    }
+    let soDau =+prompt("nhap so dau tien vao:");
+    let soThuHai=+prompt("nhap so thu hai vao:");
+    alert(`sau khi doi la :`+ doiCho(soDau,soThuHai));
 </script>
 </body>
 </html>

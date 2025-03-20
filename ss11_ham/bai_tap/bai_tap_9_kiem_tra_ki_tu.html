@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function kiemTra(arr, a) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (a === arr[i]) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            return -1;
+        }
+        return count;
+    }
+
+    let array;
+    let chuoiKiTu = prompt("nhap chuoi ki tu vao ");
+    array = chuoiKiTu.split("");
+    alert("mang la:" + array);
+    let kiTu = prompt("nhap ki tu vao");
+    alert(kiemTra(array, kiTu));
+</script>
+</body>
+</html>

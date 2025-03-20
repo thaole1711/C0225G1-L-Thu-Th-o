@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function daoNguocMang(arr){
+    for (let i = 0; i < arr.length/2; i++) {
+     let tam=arr[i];
+      arr[i]=arr[arr.length-1-i];
+      arr[arr.length-1-i]=tam;
+    }
+    return arr;
+  }
+  let array=[];
+  let doDai=+prompt("nhap do dai mang :");
+  for (let i = 0; i < doDai; i++) {
+    array[i]=prompt("nhap gia tri cua mang vao"+i);
+  }
+  alert("mang so nguyen la:"+array);
+  alert("mang so sau khi dao nguoc la:"+daoNguocMang(array));
+</script>
+</body>
+</html>
