@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let canh1 = +prompt("nhập cạnh thứ nhất là:")
+    let canh2 = +prompt("nhập cạnh thứ hai là:")
+    let canh3 = +prompt("nhập cạnh thứ ba là:")
+
+    function kiemTraCanhTamGiac(x, y, z) {
+        let canh = x > 0 && y > 0 && z > 0;
+        let canhTamGiac = ((x * x === y * y + z * z) || (y * y === z * z + x * x) || (z * z === x * x + y * y));
+        if (canh && canhTamGiac) {
+            return "là một tam giác vuông"
+        }
+        if ((x + y) > z && (x + z) > y && (y + z) > x && canh) {
+            return "là cạnh của tam giác";
+        }
+        return "là không pải cạnh của tam giác";
+
+    }
+
+    alert(kiemTraCanhTamGiac(canh1, canh2, canh3));
+
+</script>
+</body>
+</html>

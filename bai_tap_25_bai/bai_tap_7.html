@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let doDai = +prompt(`nhap chiều dai của mang`);
+    for (let i = 0; i < doDai; i++) {
+        arr[i] = +prompt(`nhap phan tu cho mang la ${i}`);
+        while (arr[i] > 100 || arr[i] < 10) {
+            arr[i] = +prompt(`nhap lai phan tu cho mang la ${i}`);
+        }
+    }
+
+    function soSanh(arr) {
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 10 > Math.floor(arr[i] / 10)) {
+                arr1.push(arr[i]);
+            }
+        }
+        return arr1;
+    }
+
+    alert(soSanh(arr));
+</script>
+</body>
+</html>

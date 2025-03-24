@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    doDai = +prompt("nhap do dai cua chuoi");
+    for (let i = 0; i < doDai; i++) {
+        array[i] = +prompt(`nhap phan tu cua mang ${i}`);
+    }
+    alert(array);
+
+    function kiemTraMang(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length-1; i+=2) {
+            if (arr[i] < arr[i + 1]) {
+                count++;
+            }
+        }
+        if(count===arr.length/2){
+            return "OK";
+        }
+            return "NO";
+    }
+    alert(kiemTraMang(array));
+</script>
+</body>
+</html>

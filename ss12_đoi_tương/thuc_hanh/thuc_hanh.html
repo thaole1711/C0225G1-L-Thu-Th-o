@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class MyDate{
+      constructor(day, month,year){
+          this.day= day;
+          this.month=month;
+          this.year= year;
+          }
+      getDay(){
+          return this.day;
+      }
+      getMonth(){
+          return this.month;
+      }
+      getYear(){
+          return this.year;
+      }
+      setDay (day) {
+          this.day= day;
+      }
+      setMonth(month){
+          this.month = month;
+      }
+      setYear(year){
+          this.year= year;
+      }
+  }
+  let date= new MyDate(24,3,2025);
+  date.setDay(25);
+  date.setMonth(3);
+  date.setYear(2025);
+  let day= date.getDay();
+  let month= date.getMonth();
+  let year= date.getYear();
+
+  alert("hôm nay là:"+day+"/"+month+"/"+year);
+</script>
+</body>
+</html>

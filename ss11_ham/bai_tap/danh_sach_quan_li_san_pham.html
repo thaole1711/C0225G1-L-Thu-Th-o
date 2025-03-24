@@ -6,29 +6,61 @@
 </head>
 <body>
 <h2>Add New Product</h2>
+<input id="name" placeholder=" new product">
+<button onclick="addnew()"> add</button>
+<h4> Add New Product</h4>
+<span style="padding-right: 10px">product:</span><span id="soluong"></span>
 <div id="ketQua"></div>
 <script>
-    let tenSanPham=["Sony Xperia","Samsung","Nokia 6"];
-    function quanLi(){
-        let stringTable =`<table border="1" style="boreder-collapse" >
+
+    let tenSanPham = ["Sony Xperia", "Samsung", "Nokia 6"];
+     quanLi(tenSanPham);
+
+    function addnew() {
+        let tenSanPhamMoi = document.getElementById("name").value;
+        if (tenSanPhamMoi != "") {
+            tenSanPham.push(tenSanPhamMoi);
+        } else {
+            alert("hãy nhập lại");
+        }
+        quanLi(tenSanPham);
+        document.getElementById("name").value = "";
+    }
+
+    function xoaSanPham(viTri) {
+        let cof = confirm("bạn có muốn xóa sản phẩm " + tenSanPham[viTri] + "?");
+        if (cof) {
+            tenSanPham.splice(viTri, 1);
+        }
+        quanLi(tenSanPham);
+    }
+
+    function suaSanPham(viTri) {
+        let suaSanPham = prompt(tenSanPham[viTri] + " nhập tên cần thay đổi vào đây");
+        tenSanPham[viTri] = suaSanPham;
+        quanLi(tenSanPham);
+
+    }
+
+    function quanLi(danhSach) {
+        let stringTable = `<table border="1" style="boreder-collapse" >
             <tr>
                 <th> poduct name</th>
                 <th> edit</th>
                 <th> Delete</th>
             </tr>`;
-        for (let i = 0; i < tenSanPham.length; i++) {
-           stringTable+=`
+        for (let i = 0; i < danhSach.length; i++) {
+            stringTable += `
             <tr>
-                           <td> ${tenSanPham[i]}</td>
-                           <td> <button>Edit</button></td>
-                           <td> <button>Delete</button></td>
+                           <td> ${danhSach[i]}</td>
+                           <td> <button onclick="suaSanPham(${i})">Edit</button></td>
+                           <td> <button onclick="xoaSanPham(${i})">Delete</button></td>
             </tr>
            `
         }
-        document.getElementById("ketQua").innerHTML= stringTable;
+        document.getElementById("ketQua").innerHTML = stringTable;
+        document.getElementById("soluong").innerHTML = tenSanPham.length;
     }
-
-    quanLi()
 
 </script>
 </body>

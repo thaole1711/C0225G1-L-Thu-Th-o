@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt(" nhập một chuỗi kí tự vào");
+    let array = [];
+    array = string.toLowerCase().split("");
+    alert("mảng là:" + array);
+
+    function kiemTraNguyenAm(arr) {
+        let arrNguyenAm = ["u", "e", "o", "a", "i"];
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arrNguyenAm.includes(arr[i]) && !arr1.includes(arr[i])) {
+                arr1.push(arr[i]);
+            }
+        }
+        return arr1;
+
+    }
+
+    alert(kiemTraNguyenAm(array));
+</script>
+</body>
+</html>

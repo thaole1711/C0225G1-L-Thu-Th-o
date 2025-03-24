@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doDai = +prompt("nhap đô dài vào đây");
+    while (doDai < 0) {
+        doDai = +prompt("nhap đô dài vào đây");
+    }
+    let arr = [];
+    for (let i = 0; i < doDai; i++) {
+        arr[i] = +prompt("phần tử của mảng là" + i);
+    }
+    alert("mảng la:" + arr);
+
+    function kiemTraUoc(array) {
+        let arr1 = [];
+        for (let i = 0; i < array.length; i++) {
+            arr1.push(tinhUoc(array[i]));
+        }
+        return arr1;
+    }
+
+    function tinhUoc(n) {
+        let sum = 0;
+        for (let i = 0; i <= n; i++) {
+            if( n%2===0){
+                sum += i;
+            }
+
+        }
+        return sum;
+
+    }
+
+    alert(kiemTraUoc(arr));
+
+</script>
+</body>
+</html>

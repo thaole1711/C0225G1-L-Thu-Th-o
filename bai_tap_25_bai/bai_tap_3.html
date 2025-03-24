@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let doDai = +prompt(`nhap do dai cua mảng`);
+    while (doDai < 0) {
+        doDai = +prompt(`nhap do dai cua mảng`);
+    }
+    for (let i = 0; i < doDai; i++) {
+        arr[i] = +prompt(`nhap phan tư của mảng ${i}`);
+    }
+    alert(`mang la${arr}`);
+
+    function kiemTraMang(arr) {
+        let count = 0;
+        let count1 = 0;
+        for (let i = 0; i < arr.length-1; i++) {
+            if (arr[i] < arr[i + 1]) {
+                count++;
+            } else {
+                count1++;
+            }
+        }
+        if (count === arr.length - 1 || count1 === arr.length - 1) {
+            return "OK";
+        }
+        return "NO";
+
+    }
+    alert(kiemTraMang(arr));
+</script>
+</body>
+</html>

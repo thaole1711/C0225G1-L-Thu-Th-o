@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 1, 4, 9];
+    let arr1=[1,2,3,4,5,6,7];
+    let arr2=[1,2,3,1,4,8];
+
+    function kiemTra(arr) {
+        if(arr.length%2!==0){
+            return "no";
+        }
+        let count = 0;
+        for (let i = 0; i < arr.length/2; i++) {
+            if (arr[i] === arr[arr.length / 2+i] / arr[i]) {
+                count++;
+            }
+        }
+        if (count === arr.length / 2) {
+            return "ok";
+        }
+        return "no";
+    }
+
+    alert(kiemTra(arr1));
+</script>
+</body>
+</html>

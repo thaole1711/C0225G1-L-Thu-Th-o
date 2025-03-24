@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let doDai = +prompt(`nhap do dai của mảng là:`);
+    while (doDai < 0) {
+        doDai = +prompt(`nhap do dai của mảng là:`);
+    }
+    for (let i = 0; i < doDai; i++) {
+        array[i] = +prompt("nhap các phần tử cua mảng là" + [i]);
+    }
+    alert(`mang là ${array}`);
+
+    function kiemTra(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                count++;
+            }
+        }
+        if (count === arr.length / 2) {
+            return "ok";
+        }
+        return "no";
+    }
+
+    let ketQua = kiemTra(array);
+    if (ketQua === "ok") {
+        alert("ok");
+    } else {
+        alert("no");
+    }
+
+</script>
+</body>
+</html>
