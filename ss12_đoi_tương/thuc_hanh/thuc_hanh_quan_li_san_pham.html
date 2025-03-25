@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>add new product</h3>
+<input id="new" placeholder="new product">
+<button onclick="add()">new add</button>
+<h3>Display All Product</h3>
+<div id="ketQua"></div>
+<script>
+  class TenSanPham{
+    constructor(stt,ten) {
+      this.stt=stt;
+      this.ten=ten;
+    }
+  }
+  let tenSanPham1=new TenSanPham("sony");
+  let tenSanPham2=new TenSanPham("samsung");
+  let tenSanPham3=new TenSanPham("nokia");
+  let array=[tenSanPham1,tenSanPham2,tenSanPham3];
+
+
+  function danhSachQuanLy(danhSach){
+    let stringTable= `<table border="1" style=" border-collapse" >;
+         <tr>
+           <th> stt</th>
+           <th> product Name</th>
+           <th> edit</th>
+           <th> delete</th>
+         </tr>`
+    for (let i = 0; i < danhSach.length; i++) {
+      stringTable+=`
+              <tr>
+                <td>${danhSach[i]}</td>
+                <td>${danhSach[i]}</td>
+                <td>edit</td>
+                <td>delete</td>
+              </tr>
+              `
+
+    }
+    document.getElementById("ketQua").innerHTML=stringTable;
+    }
+
+  danhSachQuanLy(array);
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input id="name" placeholder=" new product">
+<button onclick="addnew()"> add</button>
+<h4> Add New Product</h4>
+<span style="padding-right: 10px">product:</span><span id="soluong"></span>
+<div id="ketQua"></div>
+<script>
+    class TenSanPham {
+        constructor(hoten,) {
+            this.ten = ten;
+        }
+
+    }
+    let tenSanPham1 = new TenSanPham("sony");
+    let tenSanPham2= new TenSanPham(("samsung"));
+    let tenSanPham3= new TenSanPham("nokia");
+    let array=[tenSanPham1,tenSanPham2,tenSanPham3];
+    quanLi(array);
+    function addnew() {
+        let layTenSanPhamMoi = document.getElementById("name").value;
+        let tenSanPhamMoi = new TenSanPham(layTenSanPhamMoi);
+        if (tenSanPhamMoi !== "") {
+            array.push(tenSanPhamMoi);
+        } else {
+            alert("hãy nhập lại");
+        }
+        quanLi(array);
+        document.getElementById("name").value = "";
+    }
+
+    function xoaSanPham(viTri) {
+        let cof = confirm("bạn có muốn xóa sản phẩm " + array[viTri].ten + "?");
+        if (cof) {
+            array.splice(viTri, 1);
+        }
+        quanLi(array);
+    }
+
+    function suaSanPham(viTri) {
+        let suaSanPham = prompt(array[viTri].ten + " nhập tên cần thay đổi vào đây");
+        array[viTri].ten = suaSanPham;
+        quanLi(array);
+
+    }
+
+    function quanLi(danhSach) {
+        let stringTable = `<table border="1" style="boreder-collapse" >
+            <tr>
+                <th> poduct name</th>
+                <th> edit</th>
+                <th> Delete</th>
+            </tr>`;
+        for (let i = 0; i < danhSach.length; i++) {
+            stringTable += `
+            <tr>
+                           <td> ${danhSach[i].ten}</td>
+                           <td> <button onclick="suaSanPham(${i})">Edit</button></td>
+                           <td> <button onclick="xoaSanPham(${i})">Delete</button></td>
+            </tr>`
+
+        }
+        document.getElementById("ketQua").innerHTML = stringTable;
+        document.getElementById("soluong").innerHTML = tenSanPham.length;
+    }
+
+</script>
+</body>
+</html>
