@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let tongChiTieu=+prompt("nhập vào tổng số tiền chi tiêu của khách hàng");
+    // function getCustomerRank(spentAmount){
+    //     if(tongChiTieu>=1000){
+    //
+    //     }
+    // }
+    function getCustomerRank(spentAmount) {
+        let rank, discount = 0, freeShipping = false, gift = false;
+
+        if (spentAmount >= 1000) {
+            rank = "Platinum";
+            discount = 20;
+            freeShipping = true;
+            gift = true;
+        } else if (spentAmount >= 500) {
+            rank = "Gold";
+            discount = 10;
+            freeShipping = true;
+        } else if (spentAmount >= 100) {
+            rank = "Silver";
+            discount = 5;
+        } else {
+            rank = "Bronze";
+        }
+
+        return { rank, discount, freeShipping, gift };
+    }
+
+</script>
+</body>
+</html>

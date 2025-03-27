@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// let doUong=["cafe","cam văt","nước ép ca rốt","nước ép ca chua","nuoc loc","nước dừa"];
+// let soLuong=[0,0,0,0,0,0];
+// let giaTien=[10,12,14,16,18,20];
+let lap= true;
+let tongTien=0;
+  while (lap){
+      let luaChonDoUong=+prompt("----các loại đồ uống----\n" +
+          "1.cafe: 10k\n" +
+          "2.cam vắt: 12k\n" +
+          "3.nước ep cà rôt: 14k\n" +
+          "4.nước ep cà chua: 16k\n" +
+          "5.nước lọc: 18k\n" +
+          "6.nước dừa: 20k\n" +
+          "7.thoát gọi món\n"+
+          "tổng tiền"+tongTien);
+      switch (luaChonDoUong){
+          case 1:
+             tongTien+= tinhTien(10);
+              break;
+          case 2:
+              tongTien+= tinhTien(12);
+              break;
+          case 3:
+              tongTien+= tinhTien(14);
+              break;
+          case 4:
+              tongTien+= tinhTien(16);
+              break;
+          case 5:
+              tongTien+= tinhTien(18);
+              break;
+          case 6:
+              tongTien+= tinhTien(20);
+              break;
+          case 7:
+              let conf= confirm("bạn đã chọn xong chưa");
+              if(conf){
+                  lap= false;
+              }
+              break;
+      }
+  }
+  function tinhTien(gia){
+      let soLuong=prompt("nhập số lượng");
+      let tongTien=0;
+      tongTien=soLuong*gia;
+      return tongTien;
+  }
+
+</script>
+</body>
+</html>

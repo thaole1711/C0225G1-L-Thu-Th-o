@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr=[];
+  let n= +prompt("nhập độ dài của mảng");
+  while (n<0){
+    n= +prompt("nhập lại độ dài của mảng");
+  }
+  for (let i = 0; i < n; i++) {
+    arr[i]= +prompt("nhập các phần tử của mảng"+i);
+  }
+  alert("mang la"+arr);
+  function kiemTraMang(arr){
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 2; j < arr[i]; j++) {
+        if(arr[i]%j===0){
+          return false;
+      }
+      }
+    }
+    return true;
+  }
+  alert(kiemTraMang(arr));
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let so = +prompt("nhập vào một số nguyên dương");
+    while (so <= 0 && so > 999) {
+        so = +prompt("nhập lại một số nguyên dương");
+    }
+
+    function chuyenSoThanhChuoi(so) {
+        let soA = 0;
+        let mang = [];
+        for (let i = 1; i <= 3; i++) {
+            soA = so % 10;
+            switch (soA) {
+                case 1:
+                    mang.unshift("một");
+                    break;
+                case 2:
+                    mang.unshift("hai");
+                    break;
+                case 3:
+                    mang.unshift("ba");
+                    break;
+                case 4:
+                    mang.unshift(" bốn");
+                    break;
+                case 5:
+                    mang.unshift("năm");
+                    break;
+                case 6:
+                    mang.unshift("sáu");
+                    break;
+                case 7:
+                    mang.unshift("bảy");
+                    break;
+                case 8:
+                    mang.unshift("tám");
+                    break;
+                case 9:
+                    mang.unshift("chín");
+                    break;
+
+            }
+            so = parseInt(so / 10);
+        }
+        return mang;
+    }
+
+    alert(chuyenSoThanhChuoi(so));
+
+</script>
+</body>
+</html>

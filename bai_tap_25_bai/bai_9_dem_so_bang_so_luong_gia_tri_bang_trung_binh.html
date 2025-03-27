@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("nhập độ dài của mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại độ dài của mảng");
+    }
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập phần tử cua mảng" + i);
+    }
+    alert("mảng là:" + arr);
+
+    function demSoLuongBangTrungBinh(arr) {
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        let avg = sum / arr.length;
+        for (let i = 0; i < arr.length; i++) {
+            if (avg === arr[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    alert("so lượng số bằng với giá trị trung bình của các phần tử trong mảng là: " + demSoLuongBangTrungBinh(arr));
+</script>
+</body>
+</html>

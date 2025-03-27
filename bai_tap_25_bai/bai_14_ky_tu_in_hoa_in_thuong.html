@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let arr=["a","v","A","D"];
+  function kiemTraKiTuInHoaInThuong(arr){
+    if(arr.length%2!==0){
+      return false;
+    }
+    for (let i = 0; i < arr.length; i++) {
+      if(arr[i].toLowerCase()===arr.length/2){
+          return true;
+      }
+    }
+    return false;
+  }
+  alert(kiemTraKiTuInHoaInThuong(arr));
+</script>
+</body>
+</html>

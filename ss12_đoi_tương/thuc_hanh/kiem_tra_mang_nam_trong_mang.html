@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [1, 2, 3, 4, 6];
+    let arr2 = [1, 2, 3, 4,6,7];
+
+    function kiemTraMang(arr1, arr2) {
+        let count = 0;
+        for (let i = 0; i < arr2.length; i++) {
+            if (arr2.includes(arr1[i])) {
+                count++;
+            }
+        }
+        if (count === arr1.length) {
+            return true;
+        }
+        return false;
+    }
+
+    alert(kiemTraMang(arr1, arr2));
+</script>
+</body>
+</html>

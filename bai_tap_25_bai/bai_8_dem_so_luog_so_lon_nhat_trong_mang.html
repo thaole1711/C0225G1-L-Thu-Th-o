@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("nhập dộ dài của mảng");
+    while (n < 0) {
+        n = +prompt("nhập lai dộ dài của mảng");
+    }
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập vào phần tử của mảng" + i);
+    }
+    alert("mảng là:" + arr);
+
+    function demSoLuongPhanTuLonNhat(arr) {
+        let max = arr[0];
+        let arr1=[];
+        for (let i = 0; i < arr.length; i++) {
+            if (max <= arr[i]) {
+                max = arr[i];
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (max === arr[i]) {
+                arr1.push(arr[i]);
+            }
+        }
+
+
+        return arr1.length;
+
+    }
+
+    alert("so lượng sô lớn nhất là:" + demSoLuongPhanTuLonNhat(arr));
+
+</script>
+</body>
+</html>
