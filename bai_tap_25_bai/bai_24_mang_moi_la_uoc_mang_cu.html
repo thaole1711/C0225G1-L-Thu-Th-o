@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập độ dài của mảng");
+    while (n < 0) {
+        n = +prompt("nhập lại độ dài của mảng");
+    }
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập phần tử của mảng" + i);
+    }
+    alert("mảng là" + arr);
+
+    function taoMangMoi(arr) {
+        let arr1 = [];
+        for (let i = 0; i < arr.length; i++) {
+            let sum = 0;
+            for (let j = 1; j <= arr[i]; j++) {
+                if (arr[i] % j === 0) {
+                    sum += j;
+
+                }
+            }
+            arr1.push(sum);
+        }
+        return arr1;
+    }
+
+    alert(taoMangMoi(arr));
+</script>
+</body>
+</html>

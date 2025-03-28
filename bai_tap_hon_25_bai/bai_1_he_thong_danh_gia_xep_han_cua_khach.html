@@ -13,26 +13,35 @@
     //     }
     // }
     function getCustomerRank(spentAmount) {
-        let rank, discount = 0, freeShipping = false, gift = false;
+        let rank, discount = 0, freeShipping ="", gift = "";
 
         if (spentAmount >= 1000) {
             rank = "Platinum";
             discount = 20;
-            freeShipping = true;
-            gift = true;
+            freeShipping = "free shipping";
+            gift = "vip";
         } else if (spentAmount >= 500) {
             rank = "Gold";
             discount = 10;
-            freeShipping = true;
+            gift ="";
+            freeShipping = "free shipping";
         } else if (spentAmount >= 100) {
             rank = "Silver";
             discount = 5;
+            gift ="";
+            freeShipping ="";
         } else {
             rank = "Bronze";
+            gift="";
+            freeShipping="";
+            discount="";
         }
 
-        return { rank, discount, freeShipping, gift };
+        return [rank, discount, freeShipping, gift ] ;
     }
+    let spentAmount=+prompt("user spent:");
+    let [rank, discount, freeShipping, gift ] = getCustomerRank(spentAmount);
+    alert(`${rank} ${discount} ${freeShipping} ${gift}`);
 
 </script>
 </body>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let so=+prompt("nhập số");
+   function timNhiPhan(so){
+       let arr=[];
+       while (so>0){
+           arr.push(so%2);
+           so=parseInt(so/2);
+       }
+       return arr.reverse().join("");
+   }
+   alert(timNhiPhan(so));
+</script>
+</body>
+</html>

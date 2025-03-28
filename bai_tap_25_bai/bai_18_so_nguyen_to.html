@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = +prompt("nhập độ dai của mảng");
+    while (n < 0) {
+        n = +prompt("nhập lai độ dai của mảng");
+    }
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập giá trị từng phần tử của mảng" + i);
+    }
+    alert("mảng là" + arr);
+
+    function kiemTraMangLaSoNguyenTo(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 2; j < arr[i]; j++) {
+                if (arr[i] % j === 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    alert(kiemTraMangLaSoNguyenTo(arr));
+</script>
+</body>
+</html>
